@@ -1,0 +1,5 @@
+numpy==1.26.*
+torch==2.3.*
+jax==0.4.*
+pandas
+graphviz

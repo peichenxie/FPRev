@@ -1,0 +1,15 @@
+[project]
+name = "fprev"
+version = "0.1"
+description = "A tool for revealing floating-point accumulation orders"
+authors = [{name = "Peichen Xie"}]
+readme = ""
+requires-python = ">=3.10"
+dependencies = ["graphviz"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["fprev"]
