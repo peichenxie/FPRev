@@ -1,3 +1,48 @@
+# FPRev Experiment Dependencies
+# 
+# This file contains the Python package dependencies required to run the experimental
+# evaluation of FPRev across different libraries and hardware platforms.
+#
+# Core Dependencies:
+# -----------------
+# numpy: Fundamental numerical computing library for CPU-based operations
+#        - Provides sum(), dot(), matrix multiplication operations
+#        - Uses optimized BLAS backends (Intel MKL, OpenBLAS)
+#        - Version 1.26.* ensures compatibility with latest optimizations
+#
+# torch: PyTorch deep learning framework for GPU-accelerated operations  
+#        - Provides CUDA-accelerated operations for GPU testing
+#        - Includes Tensor Core support for specialized matrix operations
+#        - Version 2.3.* includes recent performance improvements
+#
+# jax: Google's JAX library for high-performance numerical computing
+#      - Provides JIT compilation through XLA backend
+#      - Offers alternative computational paradigm for comparison
+#      - Version 0.4.* includes latest XLA optimizations
+#
+# Utility Dependencies:
+# --------------------
+# pandas: Data analysis library for organizing and exporting experimental results
+#         - Used for creating structured DataFrames from timing results
+#         - Enables CSV export for further analysis and visualization
+#
+# graphviz: Graph visualization library for rendering summation trees
+#           - Generates PDF visualizations of revealed accumulation orders
+#           - Essential for case study outputs and qualitative analysis
+#
+# Installation Notes:
+# ------------------
+# - Install system-level graphviz first: sudo apt install graphviz
+# - For GPU support, ensure CUDA toolkit and PyTorch GPU version are installed
+# - NumPy performance depends on available BLAS implementation
+# - JAX may require additional XLA dependencies for optimal performance
+#
+# Version Constraints:
+# -------------------
+# Specific version ranges ensure reproducibility and compatibility:
+# - Patch versions allow bug fixes while maintaining API stability
+# - Version ranges tested against the experimental configurations in the paper
+
 numpy==1.26.*
 torch==2.3.*
 jax==0.4.*
